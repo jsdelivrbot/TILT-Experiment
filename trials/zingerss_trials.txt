@@ -1,0 +1,1 @@
+subjCode	lang	seed	frame	ori	respMapping	room	date_time	expName	standardStim	textShown	frame	tilt	direction	orientation	adjustingStim	standardStimPos	adjustingStimPos

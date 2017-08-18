@@ -1,0 +1,11 @@
+tiltH_101	e	10	basic	all	upLeft	GARYS-MACBOOK-PRO.LOCAL	2017-08-17 19:19	tiltH_blocked	9L9L_upright_12_right	9L9L	basic	12	right	upright	gabor	(-12, 0)	(11, -150)	practice	16	8	8	8	2436.74588203
+tiltH_101	e	10	basic	all	upLeft	GARYS-MACBOOK-PRO.LOCAL	2017-08-17 19:19	tiltH_blocked	9L9L_upright_4_right	9L9L	basic	4	right	upright	gabor	(4, 0)	(3, -150)	practice	8	3	5	5	1435.86611748
+tiltH_101	e	10	basic	all	upLeft	GARYS-MACBOOK-PRO.LOCAL	2017-08-17 19:19	tiltH_blocked	CLCL_inverted_10_left	CLCL	basic	10	left	inverted	gabor	(1, 0)	(1, -150)	practice	0	10	-10	10	1235.0268364
+tiltH_101	e	10	basic	all	upLeft	GARYS-MACBOOK-PRO.LOCAL	2017-08-17 19:19	tiltH_blocked	9L9L_upright_8_left	9L9L	basic	8	left	upright	gabor	(-12, 0)	(-2, -150)	practice	6	15	-9	9	1902.21905708
+tiltH_101	e	10	basic	all	upLeft	GARYS-MACBOOK-PRO.LOCAL	2017-08-17 19:19	tiltH_blocked	CLCL_inverted_12_right	CLCL	basic	12	right	inverted	gabor	(5, 0)	(-6, -150)	practice	7	0	7	7	1118.8890934
+tiltH_101	e	10	basic	all	upLeft	GARYS-MACBOOK-PRO.LOCAL	2017-08-17 19:19	tiltH_blocked	CLCL_upright_10_left	CLCL	basic	10	left	upright	gabor	(7, 0)	(10, -150)	practice	0	16	-16	16	1234.17711258
+tiltH_101	e	10	basic	all	upLeft	GARYS-MACBOOK-PRO.LOCAL	2017-08-17 19:19	tiltH_blocked	CLCL_inverted_6_left	CLCL	basic	6	left	inverted	gabor	(-9, 0)	(5, -150)	practice	4	14	-10	10	1335.50691605
+tiltH_101	e	10	basic	all	upLeft	GARYS-MACBOOK-PRO.LOCAL	2017-08-17 19:19	tiltH_blocked	9L9L_upright_6_right	9L9L	basic	6	right	upright	gabor	(-6, 0)	(13, -150)	practice	8	3	5	5	1452.11291313
+tiltH_101	e	10	basic	all	upLeft	GARYS-MACBOOK-PRO.LOCAL	2017-08-17 19:19	tiltH_blocked	CLCL_inverted_6_left	CLCL	basic	6	left	inverted	gabor	(-9, 0)	(5, -150)	real	0	7	-7	7	1136.82103157
+tiltH_101	e	10	basic	all	upLeft	GARYS-MACBOOK-PRO.LOCAL	2017-08-17 19:19	tiltH_blocked	CLCL_upright_10_left	CLCL	basic	10	left	upright	gabor	(-5, 0)	(6, -150)	real	0	7	-7	7	1318.32098961
+tiltH_101	e	10	basic	all	upLeft	GARYS-MACBOOK-PRO.LOCAL	2017-08-17 19:19	tiltH_blocked	9L9L_upright_12_right	9L9L	basic	12	right	upright	gabor	(-12, 0)	(11, -150)	real	9	7	2	2	1201.92313194

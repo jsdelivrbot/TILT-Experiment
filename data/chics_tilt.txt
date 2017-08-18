@@ -1,0 +1,8 @@
+chics	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-17 22:29	tiltH_blocked	9L9L_upright_8_right	9L9L	basic	8	right	upright	gabor	(0, 0)	(0, -150)	practice	3	0	3	3	3944.27394867
+chics	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-17 22:29	tiltH_blocked	CLCL_inverted_8_left	CLCL	basic	8	left	inverted	gabor	(5, 0)	(-3, -150)	practice	5	0	5	5	999.186038971
+chics	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-17 22:29	tiltH_blocked	CLCL_inverted_10_left	CLCL	basic	10	left	inverted	gabor	(-2, 0)	(-2, -150)	practice	3	0	3	3	1649.40786362
+chics	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-17 22:29	tiltH_blocked	9L9L_upright_4_left	9L9L	basic	4	left	upright	gabor	(-2, 0)	(-2, -150)	practice	4	0	4	4	917.894124985
+chics	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-17 22:29	tiltH_blocked	9L9L_inverted_2_right	9L9L	basic	2	right	inverted	gabor	(-13, 0)	(-6, -150)	practice	4	0	4	4	917.308807373
+chics	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-17 22:29	tiltH_blocked	9L9L_upright_12_right	9L9L	basic	12	right	upright	gabor	(11, 0)	(-5, -150)	practice	2	0	2	2	834.218978882
+chics	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-17 22:29	tiltH_blocked	9L9L_upright_10_left	9L9L	basic	10	left	upright	gabor	(6, 0)	(-8, -150)	practice	4	0	4	4	851.608991623
+chics	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-17 22:29	tiltH_blocked	CLCL_inverted_4_right	CLCL	basic	4	right	inverted	gabor	(0, 0)	(3, -150)	practice	5	0	5	5	833.548069
