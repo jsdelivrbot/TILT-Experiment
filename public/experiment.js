@@ -44,9 +44,20 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 
     timeline.push(instructions);
 
+    // Audio plays for its duration plus variable delay
+    let tiltTrial = {
+        type: 'html',
+        url: 'tilt/index.html',
+        cont_btn: 'done',
+        timing_response: 0,
+        force_refresh: true,
+        timing_post_trial: 0
+    }
+    
+    timeline.push(tiltTrial);
+    let i = 0;
     // Pushes each audio trial to timeline
     _.forEach(trials, (trial) => {
-        
         // Empty Response Data to be sent to be collected
         let response = {
             subjCode: subjCode,
@@ -73,14 +84,19 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
             rt: -1
         }	
 
-        // // Audio plays for its duration plus variable delay
-        // let audioTrial = {
-        //     type: 'single-stim',
-        //     stimulus: 'stimuli/sounds/' + trial.soundFile+'.wav',
-        //     timing_response: 600 + Number(trial.soa) *1000
-        // }
+        // Audio plays for its duration plus variable delay
+        let tiltTrial = {
+            type: 'html',
+            url: 'tilt/index.html',
+            cont_btn: 'done',
+            force_refresh: true,
+            on_start_trial: function() {
+                console.log(i);
+                i++;
+            }
+        }
         
-        // timeline.push(audioTrial);
+        timeline.push(tiltTrial);
 
         // Picture Trial
         // let pictureTrial = {
