@@ -35,7 +35,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
             `<p>In this short study you will be seeing some shapes in the middle of the screen that are 
             tilted to the left or right. Your task is to adjust a white bar below the shapes so that its 
             tilt matches that of the shapes. Use the mouse-wheel to adjust the tilt of the bar. When you 
-            are satisfied, press the left mouse button to proceed to the next trial. You will start with 
+            are satisfied, press the SPACE button to proceed to the next trial. You will start with 
             some practice trials to get the hang of the task.</p> ${continue_space}`,
 
             `<p>Try to be as accurate as you can, but don't spend too much time on any one trial.</p> ${continue_space}`
@@ -44,18 +44,6 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 
     timeline.push(instructions);
 
-    // Audio plays for its duration plus variable delay
-    let tiltTrial = {
-        type: 'html',
-        url: 'tilt/index.html',
-        cont_btn: 'done',
-        timing_response: 0,
-        force_refresh: true,
-        timing_post_trial: 0
-    }
-    
-    timeline.push(tiltTrial);
-    let i = 0;
     // Pushes each audio trial to timeline
     _.forEach(trials, (trial) => {
         // Empty Response Data to be sent to be collected
@@ -84,60 +72,15 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
             rt: -1
         }	
 
-        // Audio plays for its duration plus variable delay
-        let tiltTrial = {
-            type: 'html',
-            url: 'tilt/index.html',
-            cont_btn: 'done',
-            force_refresh: true,
-            on_start_trial: function() {
-                console.log(i);
-                i++;
-            }
+        var tiltTrial = {
+            type: 'single-stim',
+            stimulus: '<img style="display: block; margin: 0 auto;"src="stimuli/'+trial.standardStim+'.png" />',
+            prompt: tiltHtml,
+            is_html: true
         }
-        
+
         timeline.push(tiltTrial);
 
-        // Picture Trial
-        // let pictureTrial = {
-        //     type: 'multi-stim-multi-response',
-        //     stimuli: ['stimuli/pictures/'+trial.picFile+'.jpg'],
-        //     choices: [[90,191]],
-        //     timing_stim: [-1],
-        //     timing_post_trial: 1000,
-        //     on_finish: function (data) {
-                
-        //         // Check for match
-        //         let key = data.key_press.replace(/\D+/g, '');   // Keeps only digits
-        //         if ((trial.isMatch == 1 && key == whichyesKey) || (trial.isMatch == 0 && key == whichnoKey)) {
-        //             bleep.play();
-        //             response.isRight = '1';
-        //         }
-        //         else{
-        //             buzz.play();
-        //             response.isRight ='0';
-        //         }
-
-        //         response.rt = data.rt.replace(/\D+/g, '');
-        //         response.expTimer = data.time_elapsed / 1000;
-
-        //         response.screenRes = screen.width+'x'+screen.height,
-        //         response.windowSize = $(window).width()+'x'+$(window).height()
-        //         response.date_time = moment().format('MMMM Do YYYY, h:mm:ss a');
-
-        //         // POST response data to server
-        //         $.ajax({
-        //             url: '/data',
-        //             type: 'POST',
-        //             contentType: 'application/json',
-        //             data: JSON.stringify(response),
-        //             success: function () {
-        //                 console.log(response);
-        //             }
-        //         })
-        //     }
-        // }
-        // timeline.push(pictureTrial);
     })
 
 
@@ -155,3 +98,82 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
         }
     });
 }
+
+let tiltHtml = `
+<script>
+x = 0;
+$(document).ready(function(){
+
+    /** This is high-level function.
+         * It must react to delta being more/less than zero.
+         */
+    function handle(delta) {
+        if (delta < 0)
+        $("span").text( x+= 0.5); // assuming scroll 2 lines at a time
+        else
+        $("span").text( x-= 0.5);
+    }
+
+    /** Event handler for mouse wheel event.
+     */
+    function wheel(event){
+            var delta = 0;
+            if (!event) /* For IE. */
+                    event = window.event;
+            if (event.wheelDelta) { /* IE/Opera. */
+                    delta = event.wheelDelta/120;
+            } else if (event.detail) { /** Mozilla case. */
+                    /** In Mozilla, sign of delta is different than in IE.
+                     * Also, delta is multiple of 3.
+                     */
+                    delta = -event.detail/3;
+            }
+            /** If delta is nonzero, handle it.
+             * Basically, delta is now positive if wheel was scrolled up,
+             * and negative, if wheel was scrolled down.
+             */
+            if (delta)
+                    handle(delta);
+            /** Prevent default actions caused by mouse wheel.
+             * That might be ugly, but we handle scrolls somehow
+             * anyway, so don't bother here..
+             */
+            if (event.preventDefault)
+                    event.preventDefault();
+        event.returnValue = false;
+    }
+
+    /** Initialization code.
+     * If you use your own event management code, change it as required.
+     */
+    if (window.addEventListener)
+            /** DOMMouseScroll is for mozilla. */
+            window.addEventListener("DOMMouseScroll", wheel, false);
+    /** IE/Opera. */
+    window.onmousewheel = document.onmousewheel = wheel;
+
+});
+</script>
+
+<p>Scrolled <span>0</span> times.</p>
+<canvas id="myCanvas" width="578" height="200" style="display: block; margin: 0 auto;"></canvas>
+<script>
+  var canvas = document.getElementById("myCanvas");
+  var rectWidth = 10;
+  var rectHeight = 100;
+  function draw() {
+    var context = canvas.getContext("2d");
+    canvas.width = canvas.width;
+    // translate context to center of canvas
+    context.translate(canvas.width / 2, canvas.height / 2);
+
+    context.rotate(x*Math.PI/180);
+
+    context.fillStyle = "green";
+    context.fillRect(rectWidth / -2, rectHeight / -2, rectWidth, rectHeight);
+
+    window.requestAnimationFrame(draw);
+  }
+  draw();
+</script>
+`
