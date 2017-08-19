@@ -7,9 +7,9 @@ $(document).ready(function(){
            */
         function handle(delta) {
           if (delta < 0)
-            $("span").text( x+= 1);
+            $("span").text( x+= 0.5); // assuming scroll 2 lines at a time
           else
-            $("span").text( x-= 1);
+            $("span").text( x-= 0.5);
         }
 
         /** Event handler for mouse wheel event.
@@ -57,19 +57,17 @@ $(document).ready(function(){
 <canvas id="myCanvas" width="578" height="200"></canvas>
 <script>
   var canvas = document.getElementById('myCanvas');
-  var rectWidth = 150;
-  var rectHeight = 75;
+  var rectWidth = 10;
+  var rectHeight = 100;
   function draw() {
     var context = canvas.getContext('2d');
     canvas.width = canvas.width;
     // translate context to center of canvas
     context.translate(canvas.width / 2, canvas.height / 2);
 
-    // rotate 45 degrees clockwise
-    // context.rotate(Math.PI / 4);
-    context.rotate(x*100);
+    context.rotate(x*Math.PI/180);
 
-    context.fillStyle = 'blue';
+    context.fillStyle = 'black';
     context.fillRect(rectWidth / -2, rectHeight / -2, rectWidth, rectHeight);
 
     window.requestAnimationFrame(draw);
