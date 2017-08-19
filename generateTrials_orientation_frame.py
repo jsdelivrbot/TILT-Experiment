@@ -1,4 +1,4 @@
-import glob, os, random, sys
+import glob, os, random, sys, socket
 from useful_functions import *
 
 
@@ -82,6 +82,8 @@ def generateTrials(runTimeVars,runTimeVarsOrder):
 
 	return True
 if __name__ == '__main__':
+	subjCode = sys.argv[1]
+	room = socket.gethostname().upper()
 	# generateTrials({'subjCode':'testSubj', 'seed':2, 'frame':'basic', 'ori':'all'}, ['subjCode', 'seed', 'frame', 'ori'])	
 	print generateTrials(
 	{
@@ -89,8 +91,8 @@ if __name__ == '__main__':
 		'date_time': '2017-08-17 22:30', 
 		'expName': 'tiltH_blocked', 
 		'seed': 10, 
-		'room': 'KEVIN-HP-SPECTRE-X360-CONVERTIBLE', 
-		'subjCode': u'zoo', 
+		'room': room, 
+		'subjCode': subjCode, 
 		'frame': 'basic', 
 		'ori': 'all', 
 		'respMapping': 'upLeft'
