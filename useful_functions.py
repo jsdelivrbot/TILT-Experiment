@@ -1,6 +1,6 @@
 import os, glob, math
-from psychopy import core, visual, prefs, event, gui,misc
-from psychopy import sound
+# from psychopy import core, visual, prefs, event, gui,misc
+# from psychopy import sound
 import socket
 import datetime
  
