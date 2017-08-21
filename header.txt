@@ -1,1 +1,1 @@
-subjCode	seed	frame	ori	respMapping	room	date_time	expName	standardStim	textShown	frame	tilt	direction	orientation	adjustingStim	standardStimPos	adjustingStimPos	trialType	numWheelTurnsUp	numWheelTurnsDown	response	absResponse	rt
+subjCode	seed	frame	ori	respMapping	room	date_time	expName	standardStim	textShown	frame	tilt	direction	orientation	adjustingStim	standardStimPos	adjustingStimPos	trialType	numWheelTurnsUp	numWheelTurnsDown	response	absResponse	rt  expTime

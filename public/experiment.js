@@ -46,6 +46,9 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 
     // Pushes each audio trial to timeline
     _.forEach(trials, (trial) => {
+        standardStimPos.push(trial.standardStimPos);
+        adjustingStimPos.push(trial.adjustingStimPos);
+        stims.push('stimuli/'+trial.standardStim+'.png');
         // Empty Response Data to be sent to be collected
         let response = {
             subjCode: subjCode,
@@ -69,7 +72,8 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
             numWheelTurnsDown: -1,
             response: -1,
             absResponse: -1,    //absolute value of response
-            rt: -1
+            rt: -1,
+            expTime: -1
         }	
 
         var tiltTrial = {
@@ -84,6 +88,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
                 response.response = angle;
                 response.absResponse = Math.abs(angle);
                 response.rt = data.rt;
+                response.expTime = data.time_elapsed;
                 // POST response data to server
                 $.ajax({
                     url: '/data',
@@ -116,13 +121,18 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
         }
     });
 }
-
+let standardStimPos = [];
+let adjustingStimPos = [];
+let stims = [];
 let tiltHtml = `
 <!-- <p id="angle">Angle: <br>Up: <br>Down:</p> -->
 <script>
 angle = 0;
 up = 0;
 down = 0;
+let sPos = standardStimPos.shift();
+let aPos = adjustingStimPos.shift();
+// let stimSrc = stims.shift();
 $(document).ready(function(){
 
     /** This is high-level function.
@@ -190,21 +200,26 @@ $(document).ready(function(){
 <script>
 var img = new Image();
 img.onload = function() {
-    var canvas = document.getElementById("myCanvas");
-    var w = 50;
-    var h = 100;
-    function draw() {
-        var context = canvas.getContext("2d");
-        canvas.width = canvas.width;
-        // translate context to center of canvas
-        context.translate(canvas.width / 2, canvas.height / 2);
-        context.rotate(angle*Math.PI/180);
+    var stim = new Image();
+    stim.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var w = 50;
+        var h = 100;
+        function draw() {
+            var context = canvas.getContext("2d");
+            canvas.width = canvas.width;
+            // translate context to center of canvas
+            context.translate(canvas.width / 2, canvas.height / 2);
+            context.rotate(angle*Math.PI/180);
 
-        context.drawImage(img, w/-2, h/-2, w, h);
+            context.drawImage(img, w/-2, h/-2, w, h);
+            context.drawImage(stim, w/-2, h/-2, w, h);
 
-        window.requestAnimationFrame(draw);
+            window.requestAnimationFrame(draw);
+        }
+        draw();
     }
-    draw();
+    stim.src = stims.shift();
 }
 img.src = "img/gabor.png";
 </script>
