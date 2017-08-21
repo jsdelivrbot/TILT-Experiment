@@ -100,10 +100,11 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 }
 
 let tiltHtml = `
-<p id="angle">Angle: <br>Counter:</p>
+<p id="angle">Angle: <br>Up: <br>Down:</p>
 <script>
 angle = 0;
-counter = 0;
+up = 0;
+down = 0;
 $(document).ready(function(){
 
     /** This is high-level function.
@@ -116,13 +117,13 @@ $(document).ready(function(){
 
         if (delta < 0 && angle < max) {
             angle+= 0.5/ratio;
-            counter+= 0.5/ratio;
-            $("#angle").html( "Angle: " + angle + "<br>Counter:" + counter ); // assuming scroll 2 lines at a time
+            up+= 0.5/ratio;
+            $("#angle").html( "Angle: " + angle + "<br>Up: " + up + "<br>Down: " + down ); // assuming scroll 2 lines at a time
         }
         else if (delta > 0 && angle > min) {
             angle-= 0.5/ratio
-            counter+= 0.5/ratio;
-            $("#angle").html( "Angle: " + angle + '<br>Counter: ' + counter );
+            down+= 0.5/ratio;
+            $("#angle").html( "Angle: " + angle + '<br>Up: ' + up + "<br>Down: " + down );
         }
     }
 
