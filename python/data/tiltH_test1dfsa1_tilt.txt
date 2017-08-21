@@ -1,0 +1,1 @@
+tiltH_test1dfsa1	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-20 22:27	tiltH_blocked	9L9L_upright_2_right	9L9L	basic	2	right	upright	gabor	(-3, 0)	(6, -150)	practice	9	8	1	1	23299.5347977
