@@ -100,8 +100,9 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 }
 
 let tiltHtml = `
+<p id="angle">Angle: <br>Counter:</p>
 <script>
-x = 0;
+angle = 0;
 counter = 0;
 $(document).ready(function(){
 
@@ -113,15 +114,15 @@ $(document).ready(function(){
         var max = 20;
         var min = -20;
 
-        if (delta < 0 && x < max) {
-            x+= 0.5/ratio;
+        if (delta < 0 && angle < max) {
+            angle+= 0.5/ratio;
             counter+= 0.5/ratio;
-            $("span").text( x + ' ' + counter ); // assuming scroll 2 lines at a time
+            $("#angle").html( "Angle: " + angle + "<br>Counter:" + counter ); // assuming scroll 2 lines at a time
         }
-        else if (delta > 0 && x > min) {
-            x-= 0.5/ratio
+        else if (delta > 0 && angle > min) {
+            angle-= 0.5/ratio
             counter+= 0.5/ratio;
-            $("span").text( x + ' ' + counter );
+            $("#angle").html( "Angle: " + angle + '<br>Counter: ' + counter );
         }
     }
 
@@ -166,7 +167,6 @@ $(document).ready(function(){
 });
 </script>
 
-<p>Scrolled <span>0</span> times.</p>
 <canvas id="myCanvas" width="578" height="200" style="display: block; margin: 0 auto;"></canvas>
 <script>
 var img = new Image();
@@ -179,7 +179,7 @@ img.onload = function() {
         canvas.width = canvas.width;
         // translate context to center of canvas
         context.translate(canvas.width / 2, canvas.height / 2);
-        context.rotate(x*Math.PI/180);
+        context.rotate(angle*Math.PI/180);
 
         context.drawImage(img, w/-2, h/-2, w, h);
 
