@@ -118,7 +118,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 }
 
 let tiltHtml = `
-<p id="angle">Angle: <br>Up: <br>Down:</p>
+<!-- <p id="angle">Angle: <br>Up: <br>Down:</p> -->
 <script>
 angle = 0;
 up = 0;

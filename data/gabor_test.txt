@@ -1,3 +1,30 @@
 gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:10:26 am	tiltH_blocked	CLCL_upright_10_right	CLCL	basic	10	right	upright	gabor	(4, 0)	(-11, -150)	real	7.5	0	7.5	-1	2192
-subjCode	seed	frame	ori	respMapping	room	date_time	expName	standardStim	textShown	frame	tilt	direction	orientation	adjustingStim	standardStimPos	adjustingStimPos	trialType	numWheelTurnsUp	numWheelTurnsDown	response	absResponse	rt
 gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	CLCL_upright_2_left	CLCL	basic	2	left	upright	gabor	(0, 0)	(-10, -150)	real	7	14	-7	7	7813
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	9L9L_upright_10_left	9L9L	basic	10	left	upright	gabor	(-1, 0)	(14, -150)	real	20	8	12	12	95900
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	CLCL_upright_10_left	CLCL	basic	10	left	upright	gabor	(-6, 0)	(-14, -150)	real	0	0	0	0	622
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	9L9L_upright_6_left	9L9L	basic	6	left	upright	gabor	(-5, 0)	(-12, -150)	real	0	9	-9	9	1202
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	9L9L_inverted_4_left	9L9L	basic	4	left	inverted	gabor	(13, 0)	(7, -150)	real	0	6	-6	6	1216
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	CLCL_upright_2_left	CLCL	basic	2	left	upright	gabor	(-1, 0)	(-14, -150)	real	9.5	13	-3.5	3.5	1548
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	9L9L_upright_4_right	9L9L	basic	4	right	upright	gabor	(4, 0)	(7, -150)	real	10.5	12.5	-2	2	1440
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	9L9L_upright_12_left	9L9L	basic	12	left	upright	gabor	(1, 0)	(12, -150)	real	7	18.5	-11.5	11.5	2271
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	CLCL_upright_10_right	CLCL	basic	10	right	upright	gabor	(7, 0)	(12, -150)	real	10	10.5	-0.5	0.5	1952
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	9L9L_inverted_10_left	9L9L	basic	10	left	inverted	gabor	(-8, 0)	(5, -150)	real	13.5	16.5	-3	3	2785
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	9L9L_inverted_8_left	9L9L	basic	8	left	inverted	gabor	(-13, 0)	(10, -150)	real	16.5	11.5	5	5	6432
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	9L9L_upright_6_right	9L9L	basic	6	right	upright	gabor	(12, 0)	(-13, -150)	real	25	16.5	8.5	8.5	3564
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	CLCL_upright_12_right	CLCL	basic	12	right	upright	gabor	(-10, 0)	(-5, -150)	real	6	10.5	-4.5	4.5	1540
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	CLCL_inverted_4_left	CLCL	basic	4	left	inverted	gabor	(9, 0)	(13, -150)	real	9.5	0	9.5	9.5	2721
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:12:02 am	tiltH_blocked	9L9L_upright_4_left	9L9L	basic	4	left	upright	gabor	(-9, 0)	(12, -150)	real	0	10	-10	10	1950
+
+
+
+
+
+
+
+
+
+
+subjCode	seed	frame	ori	respMapping	room	date_time	expName	standardStim	textShown	frame	tilt	direction	orientation	adjustingStim	standardStimPos	adjustingStimPos	trialType	numWheelTurnsUp	numWheelTurnsDown	response	absResponse	rt
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:15:51 am	tiltH_blocked	CLCL_upright_4_right	CLCL	basic	4	right	upright	gabor	(14, 0)	(9, -150)	real	20	0	20	20	4076
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:15:51 am	tiltH_blocked	9L9L_upright_10_left	9L9L	basic	10	left	upright	gabor	(-11, 0)	(1, -150)	real	0	16.5	-16.5	16.5	1821
+gabor	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 12:15:51 am	tiltH_blocked	CLCL_inverted_10_right	CLCL	basic	10	right	inverted	gabor	(11, 0)	(14, -150)	real	10.5	0	10.5	10.5	1401
