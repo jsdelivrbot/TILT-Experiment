@@ -1,0 +1,10 @@
+tilHtet1df12	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-21 15:22	tiltH_blocked	CLCL_upright_4_right	CLCL	basic	4	right	upright	gabor	(1, 0)	(-11, -150)	practice	21	14	7	7	4260.76316833
+tilHtet1df12	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-21 15:22	tiltH_blocked	9L9L_upright_10_right	9L9L	basic	10	right	upright	gabor	(11, 0)	(-7, -150)	practice	10	0	10	10	1120.17893791
+tilHtet1df12	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-21 15:22	tiltH_blocked	9L9L_inverted_10_left	9L9L	basic	10	left	inverted	gabor	(-15, 0)	(9, -150)	practice	10	13	-3	3	2433.95781517
+tilHtet1df12	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-21 15:22	tiltH_blocked	CLCL_upright_10_right	CLCL	basic	10	right	upright	gabor	(4, 0)	(9, -150)	practice	9	0	9	9	1254.32801247
+tilHtet1df12	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-21 15:22	tiltH_blocked	9L9L_upright_2_right	9L9L	basic	2	right	upright	gabor	(-15, 0)	(12, -150)	practice	7	0	7	7	1317.11602211
+tilHtet1df12	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-21 15:22	tiltH_blocked	CLCL_inverted_4_left	CLCL	basic	4	left	inverted	gabor	(0, 0)	(0, -150)	practice	0	5	-5	5	2483.38294029
+tilHtet1df12	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-21 15:22	tiltH_blocked	CLCL_upright_12_right	CLCL	basic	12	right	upright	gabor	(0, 0)	(-13, -150)	practice	0	7	-7	7	983.618021011
+tilHtet1df12	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-21 15:22	tiltH_blocked	CLCL_upright_8_left	CLCL	basic	8	left	upright	gabor	(-6, 0)	(-13, -150)	practice	6	0	6	6	1216.60709381
+tilHtet1df12	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-21 15:22	tiltH_blocked	CLCL_upright_2_left	CLCL	basic	2	left	upright	gabor	(7, 0)	(-15, -150)	real	11	20	-9	9	2638.17405701
+tilHtet1df12	e	10	basic	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-21 15:22	tiltH_blocked	9L9L_inverted_2_right	9L9L	basic	2	right	inverted	gabor	(-11, 0)	(13, -150)	real	3	0	3	3	2965.53707123

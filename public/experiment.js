@@ -46,8 +46,9 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 
     // Pushes each audio trial to timeline
     _.forEach(trials, (trial) => {
-        standardStimPos.push(trial.standardStimPos);
-        adjustingStimPos.push(trial.adjustingStimPos);
+        //replace(/\D+/g, '');
+        standardStimPos.push(_.map(trial.standardStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
+        adjustingStimPos.push(_.map(trial.adjustingStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
         stims.push('stimuli/'+trial.standardStim+'.png');
         // Empty Response Data to be sent to be collected
         let response = {
@@ -78,7 +79,8 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 
         var tiltTrial = {
             type: 'single-stim',
-            stimulus: '<img style="display: block; margin: 0 auto;"src="stimuli/'+trial.standardStim+'.png" />',
+            // stimulus: '<img style="display: block; margin: 0 auto;"src="stimuli/'+trial.standardStim+'.png" />',
+            stimulus: '',
             choices: [32],
             prompt: tiltHtml,
             is_html: true,
@@ -130,8 +132,6 @@ let tiltHtml = `
 angle = 0;
 up = 0;
 down = 0;
-let sPos = standardStimPos.shift();
-let aPos = adjustingStimPos.shift();
 // let stimSrc = stims.shift();
 $(document).ready(function(){
 
@@ -196,13 +196,17 @@ $(document).ready(function(){
 });
 </script>
 
-<canvas id="myCanvas" width="578" height="200" style="display: block; margin: 0 auto;"></canvas>
+<canvas id="myCanvas" width="600" height="600" style="display: block; margin: 0 auto;"></canvas>
 <script>
+let sPos = standardStimPos.shift();
+let aPos = adjustingStimPos.shift();
 var img = new Image();
 img.onload = function() {
     var stim = new Image();
     stim.onload = function() {
         var canvas = document.getElementById("myCanvas");
+        canvas.width = document.body.clientWidth;
+        canvas.height = document.body.clientHeight;
         var w = 50;
         var h = 100;
         function draw() {
@@ -210,10 +214,16 @@ img.onload = function() {
             canvas.width = canvas.width;
             // translate context to center of canvas
             context.translate(canvas.width / 2, canvas.height / 2);
+            context.save();
+            context.translate(aPos[0],-aPos[1]);
             context.rotate(angle*Math.PI/180);
-
             context.drawImage(img, w/-2, h/-2, w, h);
-            context.drawImage(stim, w/-2, h/-2, w, h);
+            context.restore();
+
+            context.save();
+            context.translate(sPos[0],-sPos[1]);
+            context.drawImage(stim, stim.width/-2, stim.height/-2, stim.width, stim.height);
+            context.restore();
 
             window.requestAnimationFrame(draw);
         }
