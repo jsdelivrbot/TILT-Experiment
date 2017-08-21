@@ -65,18 +65,36 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
             standardStimPos: trial.standardStimPos,
             adjustingStimPos: trial.adjustingStimPos,
             trialType: 'real',  //either real or practice
-            numWheelTurnsUp: '',
-            numWheelTurnsDown: '',
-            response: '',
-            absResponse: '',    //absolute value of response
+            numWheelTurnsUp: -1,
+            numWheelTurnsDown: -1,
+            response: -1,
+            absResponse: -1,    //absolute value of response
             rt: -1
         }	
 
         var tiltTrial = {
             type: 'single-stim',
             stimulus: '<img style="display: block; margin: 0 auto;"src="stimuli/'+trial.standardStim+'.png" />',
+            choices: [32],
             prompt: tiltHtml,
-            is_html: true
+            is_html: true,
+            on_finish: function(data) {
+                response.numWheelTurnsUp = up;
+                response.numWheelTurnsDown = down;
+                response.response = angle;
+                response.absResponse = Math.abs(angle);
+                response.rt = data.rt;
+                // POST response data to server
+                $.ajax({
+                    url: '/data',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(response),
+                    success: function () {
+                        console.log(response);
+                    }
+                })
+            }
         }
 
         timeline.push(tiltTrial);
