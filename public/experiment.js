@@ -102,17 +102,27 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 let tiltHtml = `
 <script>
 x = 0;
+counter = 0;
 $(document).ready(function(){
 
     /** This is high-level function.
          * It must react to delta being more/less than zero.
          */
     function handle(delta) {
-        var ratio = 4;  // scroll to angle ratio
-        if (delta < 0)
-        $("span").text( x+= 0.5/ratio); // assuming scroll 2 lines at a time
-        else
-        $("span").text( x-= 0.5/ratio);
+        var ratio = 2;  // scroll to angle ratio
+        var max = 20;
+        var min = -20;
+
+        if (delta < 0 && x < max) {
+            x+= 0.5/ratio;
+            counter+= 0.5/ratio;
+            $("span").text( x + ' ' + counter ); // assuming scroll 2 lines at a time
+        }
+        else if (delta > 0 && x > min) {
+            x-= 0.5/ratio
+            counter+= 0.5/ratio;
+            $("span").text( x + ' ' + counter );
+        }
     }
 
     /** Event handler for mouse wheel event.
@@ -161,12 +171,10 @@ $(document).ready(function(){
 <script>
 var img = new Image();
 img.onload = function() {
-    console.log("onloaded!");
     var canvas = document.getElementById("myCanvas");
     var w = 50;
     var h = 100;
     function draw() {
-        // console.log("draw!");
         var context = canvas.getContext("2d");
         canvas.width = canvas.width;
         // translate context to center of canvas
