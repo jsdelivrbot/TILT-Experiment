@@ -108,10 +108,11 @@ $(document).ready(function(){
          * It must react to delta being more/less than zero.
          */
     function handle(delta) {
+        var ratio = 4;  // scroll to angle ratio
         if (delta < 0)
-        $("span").text( x+= 0.5); // assuming scroll 2 lines at a time
+        $("span").text( x+= 0.5/ratio); // assuming scroll 2 lines at a time
         else
-        $("span").text( x-= 0.5);
+        $("span").text( x-= 0.5/ratio);
     }
 
     /** Event handler for mouse wheel event.
@@ -154,29 +155,30 @@ $(document).ready(function(){
 
 });
 </script>
-<img id="gabor" src="img/gabor.png" style="display: hidden"/>
 
 <p>Scrolled <span>0</span> times.</p>
 <canvas id="myCanvas" width="578" height="200" style="display: block; margin: 0 auto;"></canvas>
 <script>
-  var canvas = document.getElementById("myCanvas");
-  var rectWidth = 10;
-  var rectHeight = 100;
-  function draw() {
-    var context = canvas.getContext("2d");
-    canvas.width = canvas.width;
-    // translate context to center of canvas
-    context.translate(canvas.width / 2, canvas.height / 2);
-    var img = document.getElementById("gabor");
-    context.rotate(x*Math.PI/180);
+var img = new Image();
+img.onload = function() {
+    console.log("onloaded!");
+    var canvas = document.getElementById("myCanvas");
+    var w = 50;
+    var h = 100;
+    function draw() {
+        // console.log("draw!");
+        var context = canvas.getContext("2d");
+        canvas.width = canvas.width;
+        // translate context to center of canvas
+        context.translate(canvas.width / 2, canvas.height / 2);
+        context.rotate(x*Math.PI/180);
 
-    // context.fillStyle = "green";
-    // context.fillRect(rectWidth / -2, rectHeight / -2, rectWidth, rectHeight);
+        context.drawImage(img, w/-2, h/-2, w, h);
 
-    context.drawImage(img, img.clientWidth/-2, img.clientHeight/-2, img.clientWidth, img.clientHeight);
-
-    window.requestAnimationFrame(draw);
-  }
-  draw();
+        window.requestAnimationFrame(draw);
+    }
+    draw();
+}
+img.src = "img/gabor.png";
 </script>
 `
