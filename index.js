@@ -27,41 +27,25 @@ app.listen(app.get('port'), function () {
 app.post('/trials', function (req, res) {
   console.log("trials post request received");
   console.log(req.body)
-  let subjCode = req.body.subjCode;
-  console.log("subjCode received is " + subjCode);
+  // let subjCode = req.body.subjCode;
+  // console.log("subjCode received is " + subjCode);
+  let options = req.body.options;
+  console.log("options: " + options);
 
   // Runs genTrial python script with subjCode arg
-  PythonShell.defaultOptions = { args: [subjCode] };
+  PythonShell.defaultOptions = { args: [options.subjCode, options.lang, options.seed, options.frame, options.ori, options.respMapping, options.expName] };
   PythonShell.run('generateTrials_orientation_frame.py', function (err, results) {
     // if (err) throw err;
     let trials = [];
 
 
-    fs.readFile('trials/'+subjCode+'_trials.txt', 'utf8',(err, raw_data) => {
+    fs.readFile('trials/'+options.subjCode+'_trials.txt', 'utf8',(err, raw_data) => {
       if (err) throw err;
       
       let data = d3.tsvParse(raw_data);
       console.log(data);
       res.send({success: true, trials: data});
     });
-
-    // // Reads generated trial csv file
-    // csv()
-    // .fromFile('trials/trials_' + subjCode + '.csv')
-    // // Push all trials to array
-    // .on('json',(jsonObj)=>{
-    //   trials.push(jsonObj);
-    // })
-    // // Send trials array when finished
-    // .on('done',(error)=>{
-    //   if (error) {
-    //     res.send({success: false});
-    //     throw error;
-    //   }
-    //   res.send({success: results[0], trials: trials});
-    //   console.log('finished parsing csv')
-    // })
-    
   });
 })
 

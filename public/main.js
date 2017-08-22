@@ -8,17 +8,19 @@ $(document).ready(function(){
         //////////////////////////////////////////
         // DEFINE workerId, hitId, assignmentId HERE
         //////////////////////////////////////////
-        let subjCode = $("#subjCode").val().slice();
+        let subjCode = $("#subjCode").val();
         let workerId = 'workerId';
         let assignmentId = 'assignmentId';
         let hitId = 'hitId';
-        let options = {};
-        options.lang = $('#lang').val();
-        options.seed = $('#seed').val();
-        options.frame = $('#frame').val();
-        options.ori = $('#ori').val();
-        options.respMapping = $('#respMapping').val();
-        options.expName = $('#expName').val();
+        let options = {
+            subjCode: $("#subjCode").val(),
+            lang: $('#lang').val(),
+            seed: $('#seed').val(),
+            frame: $('#frame').val(),
+            ori: $('#ori').val(),
+            respMapping: $('#respMapping').val(),
+            expName: $('#expName').val()
+        };
 
         $("form").remove();
         $("#loading").html('Loading trials... please wait. </br> <img src="img/preloader.gif">')
@@ -29,30 +31,10 @@ $(document).ready(function(){
             url: '/trials',
             type: 'POST',
             contentType: 'application/json',
-            data: JSON.stringify({subjCode: subjCode}),
+            data: JSON.stringify({options: options}),
             success: function (data) {
                 console.log(data);
                 $("#loading").remove();
-
-                // // For parsing url params
-                // $.urlParam = function(name){
-                //     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-                //     if (results==null){
-                //         return null;
-                //     }
-                //     else{
-                //         return decodeURI(results[1]) || 0;
-                //     }
-                // }
-
-                // let whichyes = Math.random() < 0.5 ? 'z' : '/';
-                // if ($.urlParam('whichyes')) {
-                //     console.log('set yes key manually to ' + $.urlParam('whichyes'));
-                //     whichyes = $.urlParam('whichyes');
-                // }
-                // else {
-                //     console.log('set yes key randomly to ' + whichyes);
-                // }
                 runExperiment(data.trials, subjCode, workerId, assignmentId, hitId, options);
             }
         })

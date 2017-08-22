@@ -82,20 +82,19 @@ def generateTrials(runTimeVars,runTimeVarsOrder):
 
 	return True
 if __name__ == '__main__':
-	subjCode = sys.argv[1]
-	room = socket.gethostname().upper()
+	# subjCode = sys.argv[1]
 	# generateTrials({'subjCode':'testSubj', 'seed':2, 'frame':'basic', 'ori':'all'}, ['subjCode', 'seed', 'frame', 'ori'])	
 	print generateTrials(
-	{
-		'lang': 'e',
-		'date_time': '2017-08-17 22:30', 
-		'expName': 'tiltH_blocked', 
-		'seed': 10, 
-		'room': room, 
-		'subjCode': subjCode, 
-		'frame': 'basic', 
-		'ori': 'all', 
-		'respMapping': 'upLeft'
+	{ 
+		'subjCode': sys.argv[1], 
+		'lang': sys.argv[2],
+		'seed': int(sys.argv[3]), 
+		'frame': sys.argv[4], 
+		'ori': sys.argv[5], 
+		'respMapping': sys.argv[6], 
+		'room': socket.gethostname().upper(),
+		'date_time': '2017-08-17 22:30',
+		'expName': sys.argv[7] 
 	},
 	['subjCode', 'lang', 'seed', 'frame', 'ori', 'respMapping', 'room', 'date_time', 'expName']
 	)
