@@ -24,3 +24,8 @@ subjCode	10	9L9L	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 9:28
 subjCode	10	9L9L	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 9:28:44 pm	tiltH_blocked	9L9L_upright_6_left	9L9L	basic	6	left	upright	gabor	(-11, 0)	(8, -150)	real	0	0	0	0	157	13345
 subjCode	10	9L9L	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 9:28:44 pm	tiltH_blocked	9L9L_upright_4_right	9L9L	basic	4	right	upright	gabor	(-3, 0)	(-11, -150)	real	0	0	0	0	431	13799
 subjCode	10	9L9L	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 21st 2017, 9:28:44 pm	tiltH_blocked	9L9L_upright_2_left	9L9L	basic	2	left	upright	gabor	(7, 0)	(10, -150)	real	0	0	0	0	174	13986
+
+
+
+
+subjCode	seed	frame	ori	respMapping	room	date_time	expName	standardStim	textShown	frame	tilt	direction	orientation	adjustingStim	standardStimPos	adjustingStimPos	trialType	numWheelTurnsUp	numWheelTurnsDown	response	absResponse	rt  expTime
