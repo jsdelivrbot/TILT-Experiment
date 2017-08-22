@@ -62,7 +62,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
 
     // Pushes each audio trial to timeline
     _.forEach(trials, (trial) => {
-        //replace(/\D+/g, '');
+        // parses the positions from "( #, # )" to [#, #] array
         standardStimPos.push(_.map(trial.standardStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
         adjustingStimPos.push(_.map(trial.adjustingStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
         stims.push('stimuli/'+trial.standardStim+'.png');
@@ -70,7 +70,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
         // Empty Response Data to be sent to be collected
         let response = {
             subjCode: subjCode,
-            seed: trial.seed,    //seed can be changed in TYP_genTrials.py file
+            seed: trial.seed,
             ori: trial.ori,
             respMapping: trial.respMapping,
             room: trial.room,
@@ -96,8 +96,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
 
         var tiltTrial = {
             type: 'single-stim',
-            // stimulus: '<img style="display: block; margin: 0 auto;"src="stimuli/'+trial.standardStim+'.png" />',
-            stimulus: '',
+            stimulus: '<canvas id="myCanvas" width="600" height="600" style="display: block; margin: 0 auto;"></canvas>',
             choices: [32],
             prompt: tiltHtml,
             is_html: true,
@@ -214,7 +213,7 @@ $(document).ready(function(){
 });
 </script>
 
-<canvas id="myCanvas" width="600" height="600" style="display: block; margin: 0 auto;"></canvas>
+
 <script>
 let sPos = standardStimPos.shift();
 let aPos = adjustingStimPos.shift();
