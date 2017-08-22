@@ -1,5 +1,5 @@
 // Function Call to Run the experiment
-function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
+function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options) {
     let timeline = [];
 
 
@@ -19,9 +19,14 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
     let welcome_block = {
         type: "text",
         cont_key: ' ',
-        text: `<h1>TYP_v2</h1>
-        <p>Welcome to the experiment. Thank you for participating! Press SPACE to begin.</p>`
     };
+    
+    if (options.lang == 'e')
+        welcome_block.text = `<h1>TYP_v2</h1>
+        <p>Welcome to the experiment. Thank you for participating! Press SPACE to begin.</p>`
+    else if (options.lang == 'h')
+        welcome_block.text = `<h1>TYP_v2</h1>
+        <p>Translate to Hebrew: Welcome to the experiment. Thank you for participating! Press SPACE to begin.</p>`
 
     timeline.push(welcome_block);
 
@@ -30,8 +35,10 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
     let instructions = {
         type: "instructions",
         key_forward: ' ',
-        key_backward: 8,
-        pages: [
+        key_backward: 8
+    };
+    if (options.lang == 'e')
+        instructions.pages = [
             `<p>In this short study you will be seeing some shapes in the middle of the screen that are 
             tilted to the left or right. Your task is to adjust a white bar below the shapes so that its 
             tilt matches that of the shapes. Use the mouse-wheel to adjust the tilt of the bar. When you 
@@ -39,8 +46,17 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
             some practice trials to get the hang of the task.</p> ${continue_space}`,
 
             `<p>Try to be as accurate as you can, but don't spend too much time on any one trial.</p> ${continue_space}`
-        ]
-    };
+        ] 
+    else if (options.lang == 'h')
+          instructions.pages = [
+            `<p>Translate to Hebrew: In this short study you will be seeing some shapes in the middle of the screen that are 
+            tilted to the left or right. Your task is to adjust a white bar below the shapes so that its 
+            tilt matches that of the shapes. Use the mouse-wheel to adjust the tilt of the bar. When you 
+            are satisfied, press the SPACE button to proceed to the next trial. You will start with 
+            some practice trials to get the hang of the task.</p> ${continue_space}`,
+
+            `<p>Try to be as accurate as you can, but don't spend too much time on any one trial.</p> ${continue_space}`
+        ]       
 
     timeline.push(instructions);
 
@@ -50,6 +66,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
         standardStimPos.push(_.map(trial.standardStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
         adjustingStimPos.push(_.map(trial.adjustingStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
         stims.push('stimuli/'+trial.standardStim+'.png');
+        respMappings.push(trial.respMapping);
         // Empty Response Data to be sent to be collected
         let response = {
             subjCode: subjCode,
@@ -126,6 +143,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 let standardStimPos = [];
 let adjustingStimPos = [];
 let stims = [];
+let respMappings = [];
 let tiltHtml = `
 <!-- <p id="angle">Angle: <br>Up: <br>Down:</p> -->
 <script>
@@ -200,13 +218,14 @@ $(document).ready(function(){
 <script>
 let sPos = standardStimPos.shift();
 let aPos = adjustingStimPos.shift();
+let respMapping = respMappings.shift();
 var img = new Image();
 img.onload = function() {
     var stim = new Image();
     stim.onload = function() {
         var canvas = document.getElementById("myCanvas");
-        canvas.width = document.body.clientWidth;
-        canvas.height = document.body.clientHeight;
+        // canvas.width = window.innerWidth;
+        // canvas.height = window.innerHeight;
         var w = 50;
         var h = 100;
         function draw() {
@@ -216,7 +235,10 @@ img.onload = function() {
             context.translate(canvas.width / 2, canvas.height / 2);
             context.save();
             context.translate(aPos[0],-aPos[1]);
-            context.rotate(angle*Math.PI/180);
+            if (respMapping == "upLeft")
+                context.rotate(angle*Math.PI/180);
+            else if (respMapping == "upRight")
+                context.rotate(-angle*Math.PI/180);
             context.drawImage(img, w/-2, h/-2, w, h);
             context.restore();
 

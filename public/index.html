@@ -27,13 +27,41 @@
     <script src="helpers.js"></script>
     <script src="experiment.js"></script>
     <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
     <title>Document</title>
 </head>
 <body>
-    <link rel="stylesheet" type="text/css" href="main.css" />
     <!-- DELETE HERE -->
     <form action="">
-        Subject Code: <input id="subjCode" type="text" name="FirstName" value=""><br>
+        Subject Code: <input id="subjCode" type="text" name="FirstName" value="subjCode"><br>
+        lang:
+        <select id="lang">
+            <option value="e">e</option>
+            <option value="h">h</option>
+        </select> <br>
+        seed: <input id="seed" type="text" name="seed" value="10"><br>
+        frame:
+        <select id="frame">
+            <option value="basic">basic</option>
+            <option value="basic-full">basic-full</option>
+            <option value="both">both</option>
+            <option value="full">full</option>
+            <option value="none">none</option>
+        </select> <br>
+        ori:         
+        <select id="ori">
+            <option value="all">all</option>
+            <option value="9L9L">9L9L</option>
+            <option value="CLCL">CLCL</option>
+        </select> <br>
+        respMapping: 
+        <select id="respMapping">
+            <option value="upLeft">upLeft</option>
+            <option value="upRight">upRight</option>
+        </select> <br>
+        expName:
+        <input id="expName" type="text" name="expName" value="tiltH_blocked"><br>
+
         <input type="submit" value="Submit">
     </form>
     <!-- DELETE HERE -->
