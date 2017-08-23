@@ -62,11 +62,6 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
 
     // Pushes each audio trial to timeline
     _.forEach(trials, (trial) => {
-        // parses the positions from "( #, # )" to [#, #] array
-        // standardStimPos.push(_.map(trial.standardStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
-        // adjustingStimPos.push(_.map(trial.adjustingStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
-        // stims.push('stimuli/'+trial.standardStim+'.png');
-        // respMappings.push(trial.respMapping);
         // Empty Response Data to be sent to be collected
         let response = {
             subjCode: subjCode,
@@ -94,28 +89,22 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
             expTime: -1
         }
 
+        // html for trial
         let tiltHTML = '';	
         $.ajax({
             url: 'tilt.html',
-            success: function(html) {
-                tiltHTML = html;
-            },
+            success: function(html) { tiltHTML = html; },
             async:false
         });
-        // console.log(_.map(trial.adjustingStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
-        // let sPos = _.map(trial.standardStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))});
-        // let aPos = _.map(trial.adjustingStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))});
-        let sPos = trial.standardStimPos.slice(1,-1);
-        let aPos = trial.adjustingStimPos.slice(1,-1);
-        let respMapping = trial.respMapping;
+
         var tiltTrial = {
             type: 'single-stim',
-            // stimulus: '<canvas id="myCanvas" width="600" height="600" style="display: block; margin: 0 auto;"></canvas>',
             stimulus:`
                 <script>
-                    var sPos = [${sPos}];
-                    var aPos = [${aPos}];
-                    var respMapping = '${respMapping}';
+                    // parses the positions from ( #, # ) to [#, #] arrays
+                    var sPos = [${trial.standardStimPos.slice(1,-1)}];  
+                    var aPos = [${trial.adjustingStimPos.slice(1,-1)}];
+                    var respMapping = '${trial.respMapping}';
                     var stim = new Image();     
                     stim.src = 'stimuli/${trial.standardStim}.png';
                 </script>`,
@@ -142,16 +131,11 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
                 })
             }
         }
-
         timeline.push(tiltTrial);
-
     })
-
 
     let endmessage = `Thank you for participating! Your completion code is ${participantID}. Copy and paste this in 
         MTurk to get paid. If you have any questions or comments, please email jsulik@wisc.edu.`
-
-
 
     jsPsych.init({
         default_iti: 0,
@@ -162,7 +146,3 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
         }
     });
 }
-// let standardStimPos = [];
-// let adjustingStimPos = [];
-// let stims = [];
-// let respMappings = [];

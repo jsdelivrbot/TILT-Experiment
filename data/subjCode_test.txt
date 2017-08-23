@@ -94,3 +94,13 @@ subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:19:
 subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:19:58 pm	tiltH_blocked	CLCL_upright_8_right	CLCL	basic	8	right	upright	gabor	(-10, 0)	(12, -150)	real	0	0	0	0	455	7820
 subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:20:12 pm	tiltH_blocked	9L9L_upright_12_right	9L9L	basic	12	right	upright	gabor	(14, 0)	(5, -150)	real	0	0	0	0	1109	1768
 subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:20:12 pm	tiltH_blocked	CLCL_inverted_10_left	CLCL	basic	10	left	inverted	gabor	(-2, 0)	(-6, -150)	real	0	0	0	0	191	1981
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:21:35 pm	tiltH_blocked	9L9L_upright_2_right	9L9L	basic	2	right	upright	gabor	(-10, 0)	(-14, -150)	real	0	0	0	0	1567	2696
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:21:35 pm	tiltH_blocked	CLCL_upright_6_right	CLCL	basic	6	right	upright	gabor	(13, 0)	(7, -150)	real	0	0	0	0	1148	3866
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:24:14 pm	tiltH_blocked	9L9L_upright_8_left	9L9L	basic	8	left	upright	gabor	(14, 0)	(2, -150)	real	0	0	0	0	2453	7696
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:24:14 pm	tiltH_blocked	CLCL_upright_8_right	CLCL	basic	8	right	upright	gabor	(6, 0)	(0, -150)	real	7	0	7	7	7980	15694
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:24:14 pm	tiltH_blocked	CLCL_upright_12_right	CLCL	basic	12	right	upright	gabor	(0, 0)	(-14, -150)	real	4	8	-4	4	2776	18487
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:31:16 pm	tiltH_blocked	CLCL_upright_12_right	CLCL	basic	12	right	upright	gabor	(1, 0)	(-10, -150)	real	4	0	4	4	1998	3213
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:36:34 pm	tiltH_blocked	9L9L_inverted_10_left	9L9L	basic	10	left	inverted	gabor	(14, 0)	(-2, -150)	real	0	0	0	0	592	1946
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:36:34 pm	tiltH_blocked	CLCL_upright_4_right	CLCL	basic	4	right	upright	gabor	(-6, 0)	(0, -150)	real	0	0	0	0	164	2126
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:36:34 pm	tiltH_blocked	CLCL_inverted_12_right	CLCL	basic	12	right	inverted	gabor	(-2, 0)	(6, -150)	real	3.5	0	3.5	3.5	2090	4228
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:36:34 pm	tiltH_blocked	9L9L_upright_12_left	9L9L	basic	12	left	upright	gabor	(-2, 0)	(-7, -150)	real	4	10	-6	6	3975	8238
