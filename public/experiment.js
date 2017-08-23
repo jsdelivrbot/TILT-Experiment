@@ -63,10 +63,10 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
     // Pushes each audio trial to timeline
     _.forEach(trials, (trial) => {
         // parses the positions from "( #, # )" to [#, #] array
-        standardStimPos.push(_.map(trial.standardStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
-        adjustingStimPos.push(_.map(trial.adjustingStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
-        stims.push('stimuli/'+trial.standardStim+'.png');
-        respMappings.push(trial.respMapping);
+        // standardStimPos.push(_.map(trial.standardStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
+        // adjustingStimPos.push(_.map(trial.adjustingStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
+        // stims.push('stimuli/'+trial.standardStim+'.png');
+        // respMappings.push(trial.respMapping);
         // Empty Response Data to be sent to be collected
         let response = {
             subjCode: subjCode,
@@ -102,14 +102,28 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
             },
             async:false
         });
-
+        // console.log(_.map(trial.adjustingStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))}));
+        // let sPos = _.map(trial.standardStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))});
+        // let aPos = _.map(trial.adjustingStimPos.split(','), (coord) => {return Number(coord.replace(/[^-?0-9]+/g, ''))});
+        let sPos = trial.standardStimPos.slice(1,-1);
+        let aPos = trial.adjustingStimPos.slice(1,-1);
+        let respMapping = trial.respMapping;
         var tiltTrial = {
             type: 'single-stim',
-            stimulus: '<canvas id="myCanvas" width="600" height="600" style="display: block; margin: 0 auto;"></canvas>',
+            // stimulus: '<canvas id="myCanvas" width="600" height="600" style="display: block; margin: 0 auto;"></canvas>',
+            stimulus:`
+                <script>
+                    var sPos = [${sPos}];
+                    var aPos = [${aPos}];
+                    var respMapping = '${respMapping}';
+                    var stim = new Image();     
+                    stim.src = 'stimuli/${trial.standardStim}.png';
+                </script>`,
             choices: [32],
             prompt: tiltHTML,
             is_html: true,
             on_finish: function(data) {
+                console.log("trial finished");
                 response.numWheelTurnsUp = up;
                 response.numWheelTurnsDown = down;
                 response.response = angle;
@@ -148,7 +162,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
         }
     });
 }
-let standardStimPos = [];
-let adjustingStimPos = [];
-let stims = [];
-let respMappings = [];
+// let standardStimPos = [];
+// let adjustingStimPos = [];
+// let stims = [];
+// let respMappings = [];

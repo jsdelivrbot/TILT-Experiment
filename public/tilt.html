@@ -1,5 +1,6 @@
 
 <!-- <p id="angle">Angle: <br>Up: <br>Down:</p> -->
+<canvas id="myCanvas" width="600" height="600" style="display: block; margin: 0 auto;"></canvas>
 <script>
 angle = 0;
 up = 0;
@@ -70,42 +71,52 @@ $(document).ready(function(){
 
 
 <script>
-let sPos = standardStimPos.shift();
-let aPos = adjustingStimPos.shift();
-let respMapping = respMappings.shift();
+// let sPos = standardStimPos.shift();
+// let aPos = adjustingStimPos.shift();
+// let respMapping = respMappings.shift();
 var img = new Image();
-img.onload = function() {
-    var stim = new Image();
-    stim.onload = function() {
-        var canvas = document.getElementById("myCanvas");
-        // canvas.width = window.innerWidth;
-        // canvas.height = window.innerHeight;
-        var w = 50;
-        var h = 100;
-        function draw() {
-            var context = canvas.getContext("2d");
-            canvas.width = canvas.width;
-            // translate context to center of canvas
-            context.translate(canvas.width / 2, canvas.height / 2);
-            context.save();
-            context.translate(aPos[0],-aPos[1]);
-            if (respMapping == "upLeft")
-                context.rotate(angle*Math.PI/180);
-            else if (respMapping == "upRight")
-                context.rotate(-angle*Math.PI/180);
-            context.drawImage(img, w/-2, h/-2, w, h);
-            context.restore();
-
-            context.save();
-            context.translate(sPos[0],-sPos[1]);
-            context.drawImage(stim, stim.width/-2, stim.height/-2, stim.width, stim.height);
-            context.restore();
-
-            window.requestAnimationFrame(draw);
-        }
-        draw();
-    }
-    stim.src = stims.shift();
-}
 img.src = "img/gabor.png";
+var images = [img, stim];
+var imageCount = images.length;
+var imagesLoaded = 0;
+
+for(var i=0; i<imageCount; i++){
+    images[i].onload = function(){
+        imagesLoaded++;
+        if(imagesLoaded == imageCount){
+            allLoaded();
+        }
+    }
+}
+function allLoaded() {
+    console.log("all loaded");
+    console.log(stim.src);
+    var canvas = document.getElementById("myCanvas");
+    // canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight;
+    var w = 50;
+    var h = 100;
+    function draw() {
+        var context = canvas.getContext("2d");
+        canvas.width = canvas.width;
+        // translate context to center of canvas
+        context.translate(canvas.width / 2, canvas.height / 2);
+        context.save();
+        context.translate(aPos[0],-aPos[1]);
+        if (respMapping == "upLeft")
+            context.rotate(angle*Math.PI/180);
+        else if (respMapping == "upRight")
+            context.rotate(-angle*Math.PI/180);
+        context.drawImage(img, w/-2, h/-2, w, h);
+        context.restore();
+
+        context.save();
+        context.translate(sPos[0],-sPos[1]);
+        context.drawImage(stim, stim.width/-2, stim.height/-2, stim.width, stim.height);
+        context.restore();
+
+        window.requestAnimationFrame(draw);
+    }
+    draw();
+}
 </script>

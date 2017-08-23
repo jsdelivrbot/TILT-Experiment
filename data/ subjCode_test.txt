@@ -1,0 +1,2 @@
+ subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 3:26:59 pm	tiltH_blocked	9L9L_upright_10_right	9L9L	basic	10	right	upright	gabor	(-13, 0)	(9, -150)	real	0	0	0	0	692	2291
+ subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 3:27:00 pm	tiltH_blocked	CLCL_upright_8_right	CLCL	basic	8	right	upright	gabor	(12, 0)	(7, -150)	real	0	0	0	0	1469	3783
