@@ -82,8 +82,6 @@ def generateTrials(runTimeVars,runTimeVarsOrder):
 
 	return True
 if __name__ == '__main__':
-	# subjCode = sys.argv[1]
-	# generateTrials({'subjCode':'testSubj', 'seed':2, 'frame':'basic', 'ori':'all'}, ['subjCode', 'seed', 'frame', 'ori'])	
 	print generateTrials(
 	{ 
 		'subjCode': sys.argv[1], 
@@ -98,6 +96,4 @@ if __name__ == '__main__':
 	},
 	['subjCode', 'lang', 'seed', 'frame', 'ori', 'respMapping', 'room', 'date_time', 'expName']
 	)
-	#use of kwargs optional
-	#def generateTrials(**runTimeVars):
 	
