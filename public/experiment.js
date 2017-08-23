@@ -21,16 +21,20 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
         cont_key: ' ',
     };
     
-    if (options.lang == 'e')
+    let continue_space = '';
+    if (options.lang == 'e') {
         welcome_block.text = `<h1>TYP_v2</h1>
         <p>Welcome to the experiment. Thank you for participating! Press SPACE to begin.</p>`
-    else if (options.lang == 'h')
+        continue_space = "<div class='right small'>(press SPACE to continue, or BACKSPACE to head back)</div>";
+    }
+    else if (options.lang == 'h') {
         welcome_block.text = `<h1>TYP_v2</h1>
         <p>Translate to Hebrew: Welcome to the experiment. Thank you for participating! Press SPACE to begin.</p>`
+        continue_space = "<div class='right small'>(press SPACE to continue, or BACKSPACE to head back)</div>";
+    }
 
     timeline.push(welcome_block);
 
-    let continue_space = "<div class='right small'>(press SPACE to continue, or BACKSPACE to head back)</div>";
 
     let instructions = {
         type: "instructions",

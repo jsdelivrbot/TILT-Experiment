@@ -21,11 +21,11 @@ $(document).ready(function(){
             respMapping: $('#respMapping').val(),
             expName: $('#expName').val()
         };
-
         $("form").remove();
+
         $("#loading").html('Loading trials... please wait. </br> <img src="img/preloader.gif">')
 
-        // This calls server to run python generate trials (judements.py) script
+        // This calls server to run python generate trials (generateTrials.py) script
         // Then passes the generated trials to the experiment
         $.ajax({
             url: '/trials',
