@@ -1,19 +1,19 @@
 
 var angle = 0;
-var up = 0;
-var down = 0;
+var right = 0;
+var left = 0;
 $(document).ready(function(){
     function handle(delta) {
         var ratio = 2;  // scroll to angle ratio
         var max = 20;
         var min = -20;
-        if (delta < 0 && angle < max) {
+        if (((delta < 0 && respMapping == 'upLeft') || (delta > 0 && respMapping == 'upRight')) && angle < max) {
             angle += 0.5/ratio;
-            up += 0.5/ratio;
+            right += 0.5/ratio;
         }
-        else if (delta > 0 && angle > min) {
+        else if (((delta > 0 && respMapping == 'upLeft') || (delta < 0 && respMapping == 'upRight')) && angle > min) {
             angle-= 0.5/ratio
-            down+= 0.5/ratio;
+            left+= 0.5/ratio;
         }
     }
     function wheel(event){
@@ -64,10 +64,7 @@ function allLoaded() {
         // draws adjusting stim
         context.save();
         context.translate(aPos[0],-aPos[1]);    // positions stim
-        if (respMapping == "upLeft")
-            context.rotate(angle*Math.PI/180);
-        else if (respMapping == "upRight")
-            context.rotate(-angle*Math.PI/180);
+        context.rotate(angle*Math.PI/180);
         context.drawImage(img, w/-2, h/-2, w, h);
         context.restore();
 

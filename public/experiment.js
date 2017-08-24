@@ -118,8 +118,14 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
             is_html: true,
             on_finish: function(data) {
                 console.log("trial finished");
-                response.numWheelTurnsUp = up;
-                response.numWheelTurnsDown = down;
+                if (trial.respMapping == 'upLeft') {
+                    response.numWheelTurnsUp = left;
+                    response.numWheelTurnsDown = right;
+                }
+                else if (trial.respMapping == 'upRight') {
+                    response.numWheelTurnsUp = right;
+                    response.numWheelTurnsDown = left;
+                }
                 response.response = angle;
                 response.absResponse = Math.abs(angle);
                 response.rt = data.rt;
