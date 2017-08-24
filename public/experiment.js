@@ -93,17 +93,18 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
             expTime: -1
         }
 
-        // html for trial
-        let tiltHTML = '';	
-        $.ajax({
-            url: 'tilt.html',
-            success: function(html) { tiltHTML = html; },
-            async:false
-        });
+        // // html for trial
+        // let tiltHTML = '';	
+        // $.ajax({
+        //     url: 'tilt.html',
+        //     success: function(html) { tiltHTML = html; },
+        //     async:false
+        // });
 
         var tiltTrial = {
             type: 'single-stim',
             stimulus:`
+                <canvas id="myCanvas" width="600" height="600" style="display: block; margin: 0 auto;"></canvas>
                 <script>
                     // parses the positions from ( #, # ) to [#, #] arrays
                     var sPos = [${trial.standardStimPos.slice(1,-1)}];  
@@ -113,7 +114,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
                     stim.src = 'stimuli/${trial.standardStim}.png';
                 </script>`,
             choices: [32],
-            prompt: tiltHTML,
+            prompt: '<script src="tilt.js"></script>',
             is_html: true,
             on_finish: function(data) {
                 console.log("trial finished");

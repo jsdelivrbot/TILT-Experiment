@@ -106,3 +106,10 @@ subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:36:
 subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:36:34 pm	tiltH_blocked	9L9L_upright_12_left	9L9L	basic	12	left	upright	gabor	(-2, 0)	(-7, -150)	real	4	10	-6	6	3975	8238
 subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:53:21 pm	tiltH_blocked	CLCL_upright_12_right	CLCL	basic	12	right	upright	gabor	(-15, 0)	(-11, -150)	real	0	0	0	0	2305	3504
 subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 23rd 2017, 4:55:13 pm	tiltH_blocked	9L9L_inverted_4_right	9L9L	basic	4	right	inverted	gabor	(-14, 0)	(-1, -150)	real	0	0	0	0	1013	4012
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 24th 2017, 4:30:05 pm	tiltH_blocked	CLCL_upright_8_left	CLCL	basic	8	left	upright	gabor	(4, 0)	(-5, -150)	real	0	0	0	0	376	14518
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 24th 2017, 4:30:05 pm	tiltH_blocked	9L9L_upright_8_right	9L9L	basic	8	right	upright	gabor	(-10, 0)	(-4, -150)	real	0	0	0	0	751	15304
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 24th 2017, 4:30:05 pm	tiltH_blocked	9L9L_inverted_4_left	9L9L	basic	4	left	inverted	gabor	(8, 0)	(-11, -150)	real	6	0	6	6	1734	17069
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 24th 2017, 4:30:05 pm	tiltH_blocked	CLCL_upright_12_right	CLCL	basic	12	right	upright	gabor	(3, 0)	(-5, -150)	real	17	8.5	8.5	8.5	6171	23277
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 24th 2017, 4:30:05 pm	tiltH_blocked	9L9L_inverted_6_left	9L9L	basic	6	left	inverted	gabor	(14, 0)	(-14, -150)	real	0	7.5	-7.5	7.5	15638	38959
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 24th 2017, 4:30:05 pm	tiltH_blocked	9L9L_upright_6_right	9L9L	basic	6	right	upright	gabor	(-7, 0)	(0, -150)	real	0	8.5	-8.5	8.5	8491	47485
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 24th 2017, 4:30:05 pm	tiltH_blocked	9L9L_inverted_4_left	9L9L	basic	4	left	inverted	gabor	(-15, 0)	(5, -150)	real	7	0	7	7	11953	59475

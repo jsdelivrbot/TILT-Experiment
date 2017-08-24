@@ -1,6 +1,4 @@
 
-<canvas id="myCanvas" width="600" height="600" style="display: block; margin: 0 auto;"></canvas>
-<script>
 var angle = 0;
 var up = 0;
 var down = 0;
@@ -83,4 +81,3 @@ function allLoaded() {
     }
     draw();
 }
-</script>
