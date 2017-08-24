@@ -93,14 +93,6 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
             expTime: -1
         }
 
-        // // html for trial
-        // let tiltHTML = '';	
-        // $.ajax({
-        //     url: 'tilt.html',
-        //     success: function(html) { tiltHTML = html; },
-        //     async:false
-        // });
-
         var tiltTrial = {
             type: 'single-stim',
             stimulus:`
