@@ -39,7 +39,10 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
     let instructions = {
         type: "instructions",
         key_forward: ' ',
-        key_backward: 8
+        key_backward: 8,
+        on_finish: function() {
+            $('#background').css('cursor','none');
+        }
     };
     if (options.lang == 'e')
         instructions.pages = [
@@ -146,6 +149,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
         timeline: timeline,
         // fullscreen: true,
         on_finish: function (data) {
+            $('#background').css('cursor','auto');
             jsPsych.endExperiment(endmessage);
         }
     });
