@@ -40,6 +40,8 @@ $(document).ready(function(){
 
 var img = new Image();
 img.src = "img/gabor.png";
+var alarmClock = new Image();
+alarmClock.src = "stimuli/alarmClock.png";
 var images = [img, stim];
 var imageCount = images.length;
 var imagesLoaded = 0;
@@ -72,6 +74,7 @@ function allLoaded() {
         context.save();
         context.translate(sPos[0],-sPos[1]);    // positions stim
         context.drawImage(stim, stim.width/-2, stim.height/-2, stim.width, stim.height);
+        context.drawImage(alarmClock, alarmClock.width/-2, alarmClock.height/-2, alarmClock.width, alarmClock.height);
         context.restore();
 
         // attempting to get true color of web image (flickers when canvas is unloaded)
