@@ -104,6 +104,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
                     var respMapping = '${trial.respMapping}';
                     var stim = new Image();     
                     stim.src = 'stimuli/${trial.standardStim}.png';
+                    var frame = '${trial.frame}';
                 </script>`,
             choices: [32],
             prompt: '<script src="tilt.js"></script>',
