@@ -74,6 +74,10 @@ function allLoaded() {
         context.save();
         context.translate(sPos[0],-sPos[1]);    // positions stim
         context.drawImage(stim, stim.width/-2, stim.height/-2, stim.width, stim.height);
+        context.strokeStyle = 'white';  // some color/style
+        context.lineWidth = 1;         // thickness     
+        context.strokeRect(stim.width/-2.5, stim.height/-3, stim.width/2.5*2, stim.height/3*2);
+        context.stroke();
         context.drawImage(alarmClock, alarmClock.width/-2, alarmClock.height/-2, alarmClock.width, alarmClock.height);
         context.restore();
 

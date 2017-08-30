@@ -1,0 +1,11 @@
+ti2	e	10	full	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-30 15:59	tiltH_blocked	9L9L_inverted_4_left	9L9L	full	4	left	inverted	gabor	(8, 0)	(-3, -150)	practice	9	0	9	9	1676.53012276
+ti2	e	10	full	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-30 15:59	tiltH_blocked	9L9L_upright_2_right	9L9L	full	2	right	upright	gabor	(-1, 0)	(-1, -150)	practice	9	0	9	9	1061.99288368
+ti2	e	10	full	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-30 15:59	tiltH_blocked	CLCL_inverted_10_left	CLCL	full	10	left	inverted	gabor	(-13, 0)	(7, -150)	practice	5	0	5	5	950.731992722
+ti2	e	10	full	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-30 15:59	tiltH_blocked	CLCL_upright_2_left	CLCL	full	2	left	upright	gabor	(-9, 0)	(7, -150)	practice	7	0	7	7	897.479057312
+ti2	e	10	full	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-30 15:59	tiltH_blocked	9L9L_inverted_8_left	9L9L	full	8	left	inverted	gabor	(-12, 0)	(-3, -150)	practice	11	0	11	11	851.400136948
+ti2	e	10	full	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-30 15:59	tiltH_blocked	CLCL_inverted_12_left	CLCL	full	12	left	inverted	gabor	(-1, 0)	(-7, -150)	practice	9	0	9	9	831.955194473
+ti2	e	10	full	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-30 15:59	tiltH_blocked	9L9L_inverted_4_right	9L9L	full	4	right	inverted	gabor	(14, 0)	(2, -150)	practice	10	0	10	10	834.009885788
+ti2	e	10	full	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-30 15:59	tiltH_blocked	9L9L_upright_12_right	9L9L	full	12	right	upright	gabor	(2, 0)	(-7, -150)	practice	7	0	7	7	783.711910248
+ti2	e	10	full	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-30 15:59	tiltH_blocked	9L9L_inverted_10_left	9L9L	full	10	left	inverted	gabor	(5, 0)	(14, -150)	real	9	0	9	9	1015.77305794
+ti2	e	10	full	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-30 15:59	tiltH_blocked	9L9L_upright_10_left	9L9L	full	10	left	upright	gabor	(8, 0)	(-5, -150)	real	10	0	10	10	885.392189026
+ti2	e	10	full	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	2017-08-30 15:59	tiltH_blocked	CLCL_inverted_10_right	CLCL	full	10	right	inverted	gabor	(-11, 0)	(1, -150)	real	6	0	6	6	862.884044647
