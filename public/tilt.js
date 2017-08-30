@@ -53,12 +53,12 @@ for(var i=0; i<imageCount; i++){
     }
 }
 function allLoaded() {
-    var canvas = document.getElementById("myCanvas");
+    canvas = document.getElementById("myCanvas");
+    context = canvas.getContext("2d");
     var w = 50;
     var h = 100;
     function draw() {
-        var context = canvas.getContext("2d");
-        canvas.width = canvas.width;    // hacky way to fix smoothness
+        canvas.width = canvas.width;    // hacky way to fix stuttering
         context.translate(canvas.width / 2, canvas.height / 2); // translates context to center of canvas
 
         // draws adjusting stim
@@ -73,6 +73,11 @@ function allLoaded() {
         context.translate(sPos[0],-sPos[1]);    // positions stim
         context.drawImage(stim, stim.width/-2, stim.height/-2, stim.width, stim.height);
         context.restore();
+
+        // attempting to get true color of web image (flickers when canvas is unloaded)
+        // var rgb = context.getImageData(stim.width/-2+sPos[0]+canvas.width/2+5, stim.height/-2+sPos[1]+canvas.height/2+5, 1,1).data;
+        // document.getElementById("background").style.background = rgbToHex(rgb[0],rgb[1],rgb[2]);
+
 
         window.requestAnimationFrame(draw);
     }
