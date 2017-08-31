@@ -316,3 +316,10 @@ subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 30th 2017, 4:28:
 subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 30th 2017, 4:28:31 pm	tiltH_blocked	9L9L_inverted_2_right	9L9L	basic	2	right	inverted	gabor	(-9, 0)	(6, -150)	real	0	0	0	0	98	28199
 subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 30th 2017, 4:28:31 pm	tiltH_blocked	9L9L_inverted_2_right	9L9L	basic	2	right	inverted	gabor	(8, 0)	(10, -150)	real	0	0	0	0	107	28331
 subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 30th 2017, 4:28:31 pm	tiltH_blocked	9L9L_inverted_12_right	9L9L	basic	12	right	inverted	gabor	(9, 0)	(5, -150)	real	0	0	0	0	80	28457
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 30th 2017, 4:30:41 pm	tiltH_blocked	9L9L_inverted_10_right	9L9L	none	10	right	inverted	gabor	(-12, 0)	(9, -150)	real	0	0	0	0	171	2047
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 30th 2017, 4:30:41 pm	tiltH_blocked	9L9L_inverted_8_right	9L9L	none	8	right	inverted	gabor	(-2, 0)	(0, -150)	real	0	0	0	0	362	2458
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 30th 2017, 4:30:41 pm	tiltH_blocked	9L9L_inverted_8_right	9L9L	none	8	right	inverted	gabor	(-7, 0)	(0, -150)	real	0	0	0	0	193	2688
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 30th 2017, 4:30:41 pm	tiltH_blocked	9L9L_inverted_4_left	9L9L	none	4	left	inverted	gabor	(-12, 0)	(-15, -150)	real	0	0	0	0	185	2912
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 30th 2017, 4:30:41 pm	tiltH_blocked	9L9L_upright_12_left	9L9L	none	12	left	upright	gabor	(9, 0)	(2, -150)	real	0	0	0	0	453	3411
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 30th 2017, 4:30:41 pm	tiltH_blocked	9L9L_upright_10_right	9L9L	none	10	right	upright	gabor	(4, 0)	(5, -150)	real	0	0	0	0	332	3777
+subjCode	10	all	upLeft	KEVIN-HP-SPECTRE-X360-CONVERTIBLE	August 30th 2017, 4:30:41 pm	tiltH_blocked	CLCL_upright_10_left	CLCL	none	10	left	upright	gabor	(4, 0)	(1, -150)	real	0	0	0	0	538	4345

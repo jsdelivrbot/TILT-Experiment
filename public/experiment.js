@@ -71,7 +71,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId, options)
     _.forEach(trials, (trial) => {
         // Empty Response Data to be sent to be collected
         let response = {
-            subjCode: subjCode,
+            subjCode: trial.subjCode,
             seed: trial.seed,
             ori: trial.ori,
             respMapping: trial.respMapping,
